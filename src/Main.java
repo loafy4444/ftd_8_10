@@ -23,11 +23,9 @@ public class Main {
 				bw = new BufferedWriter(new FileWriter(file));
 				Student test = new Student("Ben", "Grand Junction", "Colorado");
 
-				bw.write(test.getName());
+				bw.write(test.toString());
 				bw.newLine();
-				bw.write(test.getCity());
-				bw.newLine();
-				bw.write(test.getState());
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			} finally {
@@ -42,7 +40,9 @@ public class Main {
 
 			try {
 				System.out.println("File already exists.  Following student information read from file: ");
+				
 				br = new BufferedReader(new FileReader(file));
+							
 				Student test = new Student(br.readLine(), br.readLine(), br.readLine());
 
 				System.out.println(test.toString());
@@ -58,33 +58,6 @@ public class Main {
 			}
 
 		}
-
-		/*
-		 * File f = new File("C:/Users/ft9/Desktop/blank.txt");
-		 * 
-		 * if(!f.exists()) f.createNewFile();
-		 * 
-		 * // f.delete(); // f.deleteOnExit();
-		 * 
-		 * //Input Streams and Buffers InputStream in = new FileInputStream(f);
-		 * 
-		 * BufferedInputStream buff = new BufferedInputStream(in);
-		 * BufferedReader read = new BufferedReader(new
-		 * InputStreamReader(buff));
-		 * 
-		 * BufferedReader fread = new BufferedReader(new FileReader(f));
-		 * 
-		 * //Output Streams and Buffers OutputStream out = new
-		 * FileOutputStream(f);
-		 * 
-		 * BufferedOutputStream bwriter = new BufferedOutputStream(out);
-		 * BufferedWriter write = new BufferedWriter(new
-		 * OutputStreamWriter(bwriter));
-		 * 
-		 * BufferedWriter fwrite = new BufferedWriter(new FileWriter(f));
-		 * 
-		 * // Bad Idea!! // while(f.read != -1){ // f.read(); // }
-		 */
 
 	}
 

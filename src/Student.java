@@ -14,7 +14,7 @@ public class Student {
 	
 	@Override
 	public String toString() {
-		return name + "\n" + city + "\n" + state ;
+		return name + "\n" + city + "\n"  + state ;
 	}
 
 	public String getName() {
