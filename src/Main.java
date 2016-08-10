@@ -21,10 +21,26 @@ public class Main {
 				System.out.println("File student.txt does not exist.  Creating file and adding student information.");
 				
 				bw = new BufferedWriter(new FileWriter(file));
-				Student test = new Student("Ben", "Grand Junction", "Colorado");
+				Student test = new Student("Ben", "Ricks", "04/19/1980", "36", 
+							"2484 Routt Ave.", "Grand Junction", "Colorado");
 
-				bw.write(test.toString());
+//				bw.write(test.toString());
+//				bw.newLine();
+				bw.write(test.firstName);
 				bw.newLine();
+				bw.write(test.lastName);
+				bw.newLine();
+				bw.write(test.dob);
+				bw.newLine();
+				bw.write(test.age);
+				bw.newLine();
+				bw.write(test.address);
+				bw.newLine();
+				bw.write(test.city);
+				bw.newLine();
+				bw.write(test.state);
+				bw.newLine();
+				
 				
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -43,7 +59,7 @@ public class Main {
 				
 				br = new BufferedReader(new FileReader(file));
 							
-				Student test = new Student(br.readLine(), br.readLine(), br.readLine());
+				Student test = new Student(br.readLine(), br.readLine(), br.readLine(), br.readLine(), br.readLine(), br.readLine(), br.readLine());
 
 				System.out.println(test.toString());
 				

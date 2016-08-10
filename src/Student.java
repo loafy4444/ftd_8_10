@@ -1,28 +1,76 @@
 
 public class Student {
 
-	String name;
+	String firstName;
+	String lastName;
+	String fullName;
+	String age;
+	String dob;
+	String address;
 	String city;
 	String state;
 
-	
-	public Student(String name, String city, String state){
-		this.name = name;
+	public Student(String firstName, String lastName, String dob, String age, String address, String city, String state) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dob = dob;
+		this.age = age;
+		this.address = address;
 		this.city = city;
 		this.state = state;
 	}
-	
+
 	@Override
 	public String toString() {
-		return name + "\n" + city + "\n"  + state ;
+		return " ----  Student ----" +
+				"\n" + getFullName() + 
+				"\n" + address +
+				"\n" + city + ", " + state +
+				"\nDoB: " + dob + "\tAge: " + age;
 	}
 
-	public String getName() {
-		return name;
+	public String getFullName(){
+		return fullName = firstName + " " + lastName;
+	}
+	
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getState() {
